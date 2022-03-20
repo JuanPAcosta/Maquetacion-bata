@@ -1,0 +1,322 @@
+:root {
+    --linear-bg: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+    --bitcoin-orange: #f7931a;
+    --soft-orange: #ffe9d4;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #201e1c;
+    --warm-black1: #282623;
+    --grey: #bababa;
+    --hard-grey: #808080;
+    --off-white: #faf8f7;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--font-color);
+}
+
+.subtitle {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--font-color);
+}
+
+/* Header Maquetacion */
+
+.header-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--linear-bg);
+    height: 330px;
+    position: relative;
+}
+
+.header-title-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.header-title-container figure {
+    margin: 0;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-title-container figure img:nth-child(1) {
+    position: absolute;
+    z-index: 3;
+}
+
+.header-title-container figure img:nth-child(2) {
+    padding-left: 4px;
+    z-index: 4;
+}
+
+.header-title {
+    line-height: 18px;
+    align-self: center;
+    color: var(--bitcoin-orange);
+}
+
+.header-text-container {
+    color: var(--white);
+}
+
+.header-text {
+    margin-top: 24px;
+}
+
+.header-subtext {
+    margin-top: 24px;
+}
+
+.header-button-container {
+    position: absolute;
+    bottom: -8%;
+    box-sizing: border-box;
+}
+
+.primary-button {
+    padding: 16px 24px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 12px var(--grey);
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+.header-button-container img {
+    transform: rotate(270deg);
+    margin-left: 12px;
+}
+
+.header-text-container {
+    width: 85vw;
+}
+
+/* Main Maquetacion Division 1 */
+
+.first-container {
+    padding-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+
+.text-container {
+    text-align: center;
+    width: 90vw;
+}
+
+.text-title {
+    margin-top: 20px;
+}
+
+.text-subtitle {
+    margin-top: 20px;
+    color: var(--grey);
+}
+
+/* Main Maquetacion Division 1 Tabla Monedas */
+
+.table-container {
+    margin-top: 40px;
+    position: relative;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+.table-title {
+    font-size: 18px;
+    color: var(--bitcoin-orange);
+    line-height: 24px;
+    margin: 8px;
+}
+
+.table-coins {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 12px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--white);
+    border-collapse: collapse;
+}
+
+.table-coins tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-coins td {
+    width: 80px;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+}
+
+.table-values {
+    display: flex;
+    padding-left: 16px;
+    justify-content: space-between;
+}
+
+.red-arrow-container,
+.green-arrow-container {
+    margin: 0;
+    position: relative;
+}
+
+.red-arrow-container img:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+.green-arrow-container img:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: 55%;
+}
+
+.arrow-table-coins {
+    margin: 0;
+    position: absolute;
+    right: 7.5%;
+    bottom: 55%;
+}
+
+.arrow-table-coins img {
+    transform: rotate(180deg);
+}
+
+/* Main Maquetacion Division 1 Info */
+
+.info-table {
+    margin: 16px 0 60px 0;
+    justify-self: center;
+    width: 40vw;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.info-table p {
+    margin: 0;
+    padding: 8px;
+}
+
+.info-table p span {
+    font-weight: bold;
+}
+
+/* Main Maquetacion Division 2 */
+
+.second-container {
+    background-color: var(--warm-black);
+    padding-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-container h1 {
+    color: var(--white);
+}
+
+.second-container h2 {
+    color: var(--hard-grey);
+}
+
+.section-cards {
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-title {
+    font-size: 18px;
+}
+
+.card {
+    margin-bottom: 16px;
+    background-color: var(--warm-black1);
+    width: 80vw;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.icon-card {
+    margin: 0;
+    position: relative;
+}
+
+.card h1 {
+    padding: 4px 0;
+}
+
+.time-icon img:nth-child(2) {
+    position: absolute;
+    left: 4%;
+    top: 18%;
+}
+
+.eye-icon img:nth-child(2) {
+    position: absolute;
+    left: 3%;
+    top: 20%;
+}
+
+.price-icon img:nth-child(2) {
+    position: absolute;
+    left: 2.5%;
+    bottom: 0%;
+}
+
+.info-icon img:nth-child(2) {
+    position: absolute;
+    left: 2.5%;
+    top: 15%;
+}
+
+.bitcoin-main-image {
+    display: grid;
+    place-content: center;
+    position: relative;
+    color: var(--white);
+}
+
+.bitcoin-main-image h1 {
+    position: absolute;
+    justify-self: center;
+    top: 16%;
+}
