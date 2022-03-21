@@ -530,6 +530,10 @@ body {
         color: var(--bitcoin-orange);
     }
 
+    .bitcoin-main-image {
+        background-size: cover;
+    }
+
     .bitcoin-main-image h1 {
         font-size: 40px;
         line-height: 42px;
