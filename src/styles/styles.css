@@ -57,22 +57,8 @@ body {
     margin-bottom: 12px;
 }
 
-.header-title-container figure {
-    margin: 0;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.header-title-container figure img:nth-child(1) {
-    position: absolute;
-    z-index: 3;
-}
-
-.header-title-container figure img:nth-child(2) {
-    padding-left: 4px;
-    z-index: 4;
+.header-title-container img {
+    padding-right: 8px;
 }
 
 .header-title {
@@ -96,7 +82,6 @@ body {
 .header-button-container {
     position: absolute;
     bottom: -8%;
-    box-sizing: border-box;
 }
 
 .primary-button {
@@ -120,11 +105,14 @@ body {
 
 /* Main Maquetacion Division 1 */
 
-.first-container {
+.container {
     padding-top: 44px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.first-container {
     background-color: #e5e5e5;
 }
 
@@ -147,9 +135,9 @@ body {
 .table-container {
     margin-top: 40px;
     position: relative;
-    width: 100vw;
     display: grid;
     place-content: center;
+    box-sizing: content-box;
 }
 
 .table-title {
@@ -167,6 +155,8 @@ body {
     font-family: "Inter", sans-serif;
     background-color: var(--white);
     border-collapse: collapse;
+    width: 50vw;
+    max-width: 260px;
 }
 
 .table-coins tr {
@@ -175,7 +165,8 @@ body {
 }
 
 .table-coins td {
-    width: 80px;
+    width: 50%;
+    min-width: 80px;
     border: 1px solid #e5e5e5;
     padding: 12px;
 }
@@ -183,31 +174,20 @@ body {
 .table-values {
     display: flex;
     padding-left: 16px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.red-arrow-container,
-.green-arrow-container {
-    margin: 0;
-    position: relative;
-}
-
-.red-arrow-container img:nth-child(1) {
-    position: absolute;
-    right: 0;
-    top: 45%;
-}
-
-.green-arrow-container img:nth-child(1) {
-    position: absolute;
-    right: 0;
-    top: 55%;
+.table-values img {
+    width: 12px;
+    height: 12px;
+    padding-left: 16px;
 }
 
 .arrow-table-coins {
     margin: 0;
     position: absolute;
-    right: 7.5%;
+    right: -15%;
     bottom: 55%;
 }
 
@@ -215,12 +195,23 @@ body {
     transform: rotate(180deg);
 }
 
-/* Main Maquetacion Division 1 Info */
+.table-comision {
+    display: none;
+}
+
+.table-comision h1 {
+    color: var(--secondary-blue);
+}
+
+.table-comision .info-table {
+    background-color: var(--soft-blue);
+}
+
+/* Main Maquetacion Division 1 Tabla Info */
 
 .info-table {
     margin: 16px 0 60px 0;
     justify-self: center;
-    width: 40vw;
     text-align: center;
     font-weight: 400;
     font-size: 12px;
@@ -242,11 +233,7 @@ body {
 
 .second-container {
     background-color: var(--warm-black);
-    padding-top: 44px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding-bottom: 40px;
 }
 
 .second-container h1 {
@@ -273,50 +260,328 @@ body {
     width: 80vw;
     border-radius: 4px;
     padding: 12px;
-}
-
-.icon-card {
-    margin: 0;
-    position: relative;
+    max-width: calc(340px - 24px);
+    box-sizing: content-box;
+    box-shadow: 0px 1px 12px rgb(27, 27, 27);
 }
 
 .card h1 {
     padding: 4px 0;
 }
 
-.time-icon img:nth-child(2) {
-    position: absolute;
-    left: 4%;
-    top: 18%;
-}
-
-.eye-icon img:nth-child(2) {
-    position: absolute;
-    left: 3%;
-    top: 20%;
-}
-
-.price-icon img:nth-child(2) {
-    position: absolute;
-    left: 2.5%;
-    bottom: 0%;
-}
-
-.info-icon img:nth-child(2) {
-    position: absolute;
-    left: 2.5%;
-    top: 15%;
-}
-
 .bitcoin-main-image {
     display: grid;
-    place-content: center;
+    background-image: url(../assets/images/MainImage.jpg);
     position: relative;
-    color: var(--white);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
 }
 
 .bitcoin-main-image h1 {
+    color: var(--white);
     position: absolute;
     justify-self: center;
     top: 16%;
+}
+
+/*  Maquetacion Main Tercer Container*/
+
+.third-container {
+    background-color: var(--off-white);
+    padding-bottom: 65px;
+}
+
+.third-container .text-container h2 {
+    color: #757575;
+}
+
+/*  Maquetacion Cartas de Pago*/
+
+.slider-container {
+    padding: 60px 0 20px 0;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+
+.payment-cards-container {
+    display: flex;
+    width: auto;
+}
+
+.payment-card {
+    background-color: var(--white);
+    padding: 24px 8px;
+    border-radius: 12px;
+    margin: 8px;
+    width: auto;
+    min-width: 190px;
+    max-width: 220px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: var(--grey);
+    position: relative;
+}
+
+.payment-title {
+    font-weight: bold;
+}
+
+.payment-price {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 63px;
+    position: relative;
+    width: fit-content;
+    justify-self: center;
+    margin: 8px 0;
+}
+
+.payment-price span {
+    font-size: 12px;
+    line-height: 15px;
+    position: absolute;
+    top: 12%;
+    left: -20%;
+}
+
+.payment-info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.payment-button {
+    color: inherit;
+    width: 150px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    border: 1px solid var(--bitcoin-orange);
+    border-radius: 4px;
+}
+
+.payment-button span {
+    width: 15px;
+    height: 15px;
+    background-image: url(../assets/icons/Arrow-right.png);
+}
+
+#recomended-card {
+    position: absolute;
+    top: -28px;
+    background-color: var(--bitcoin-orange);
+    color: var(--white);
+    font-size: 12px;
+    line-height: 15px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.payment-card:hover {
+    color: black;
+}
+
+/*  Maquetacion Seccion de preguntas*/
+
+.questions-container {
+    width: 90vw;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-title {
+    margin: 24px 0;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question h2 {
+    margin: 8px 12px 8px 8px;
+}
+
+.question img {
+    transform: rotate(270deg);
+    padding: 0px 4px 18px 0px;
+}
+
+/*
+
+                    <div class="answer subtitle">
+                        No. Batabit es una plataforma exclusivamente para
+                        consulta de información y toma de decisiones. Todavía no
+                        ofrecemos servicios de compra o venta.
+                    </div>
+.answer {
+    padding: 12px 30px 12px 8px;
+    font-weight: 400;
+    color: #757575;
+}
+
+*/
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--bitcoin-orange);
+    padding-top: 28px;
+    padding-bottom: 20px;
+}
+
+.footer-container ul {
+    padding-left: 20px;
+}
+
+.footer-container ul li {
+    list-style: none;
+}
+
+.footer-container ul li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-container ul li h2 {
+    padding: 4px 0;
+}
+
+.final-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-logo img {
+    width: 38px;
+    padding-top: 16px;
+}
+
+.final-logo h2 {
+    color: var(--white);
+    font-size: 8px;
+    padding: 4px;
+}
+
+/* CSS Media width Tablet - Desktop */
+
+@media (min-width: 500px) {
+    .bitcoin-main-image {
+        background-image: url(../assets/images/MainImage2.jpg);
+        height: 290px;
+    }
+
+    .bitcoin-main-image h1 {
+        top: 45%;
+    }
+}
+
+@media (min-width: 700px) {
+    .header-container {
+        height: 450px;
+    }
+
+    .text-title,
+    .header-text {
+        font-size: 40px;
+        line-height: 42px;
+        max-width: 465px;
+    }
+
+    .text-subtitle,
+    .header-subtext {
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 465px;
+    }
+
+    .text-container,
+    .header-text-container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .header-title {
+        font-size: 27px;
+        line-height: 21px;
+        color: var(--bitcoin-orange);
+    }
+
+    .bitcoin-main-image h1 {
+        font-size: 40px;
+        line-height: 42px;
+        top: 40%;
+    }
+
+    .questions-container {
+        max-width: 465px;
+    }
+
+    .final-logo img {
+        width: 80px;
+    }
+
+    .footer-container h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .final-logo h2 {
+        font-size: 17px;
+    }
+
+    .table-comision {
+        display: grid;
+        place-content: center;
+    }
+
+    .arrow-table-coins {
+        display: none;
+    }
+
+    .info-table {
+        justify-self: left;
+    }
+
+    .section-tables {
+        width: 560px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        margin: 8px;
+    }
+
+    .header-button-container {
+        bottom: -5%;
+    }
 }
